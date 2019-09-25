@@ -1,0 +1,27 @@
+// Variables
+
+$darkColor: #000000;
+$helvetica: 'Helvetica';
+
+// Mixins
+
+@mixin fields() {
+    margin: 10px 0;
+    padding: 20px;
+    border: 2px solid $darkColor;
+    border-radius: 10px	
+}
+@mixin transform($transform){
+    -moz-transform: $transform;
+    -o-transform: $transform;
+    -ms-transform: $transform;
+    -webkit-transform: $transform;
+    transform: $transform;
+};
+@mixin transition($transition){
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -ms-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+};

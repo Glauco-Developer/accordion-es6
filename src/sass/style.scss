@@ -1,0 +1,87 @@
+@import 'base.scss';
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+#accordion{
+	font-family: $helvetica;
+	width: 90%;
+	max-width: 540px;
+	margin: 0 auto;
+	color: $darkColor;
+
+	.heading{
+		position: relative;
+		overflow: hidden;
+		font-size: 18px;	
+		font-family: $helvetica;
+		cursor: pointer;
+		@include fields;
+		@include transition(background-color .4s ease);
+		
+		&:hover, &.active{
+			background-color: rgba(0,0,0,.05);
+		}
+
+		&.active{
+			
+			.plus-minus{
+
+				&:after{
+					transform: rotate(90deg);
+					opacity: 0;
+				}
+				
+				&:before{
+					transform: rotate(0deg);
+				}
+			
+			}
+
+		}
+
+		.plus-minus{
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			width: 20px;
+			height: 20px;
+			@include transform(translateY(-50%));
+			
+			&:before, &:after{
+				content: '';
+				background-color: $darkColor;
+				position: absolute;
+				width: 100%;
+				height: 2px;
+				left: 0;
+				top: 10px;
+				@include transition(all .5s ease-in-out);
+			}
+
+			&:before{
+				transform: rotate(-180deg);
+			}
+
+			&:after{
+				transform: rotate(-90deg);
+				opacity: 1;
+			}
+
+		}
+
+	}
+
+	.content{
+		@include fields;
+
+		p{
+			font-size: 14px;		
+			line-height: 1.5;
+		}
+
+	}
+}
