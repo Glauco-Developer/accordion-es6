@@ -8,27 +8,38 @@
     <title>Accordion</title>
 </head>
 <body>
-    <div id="accordion">
-        <div class="heading active">
-            Question 1
-            <i class="plus-minus"></i>
-        </div> 
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
+    <main>
+        <div id="accordion" class="accordion" aria-label="Accordion">
+            <div class="heading active" aria-controls="content-1" aria-expanded="true">
+                Question 1
+                <i class="plus-minus"></i>
+            </div> 
+            <div class="content" aria-hidden="false">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
+            </div>
+            <div class="heading" aria-controls="content-2" aria-expanded="false">
+                Question 2
+                <i class="plus-minus"></i>
+            </div> 
+            <div class="content" aria-hidden="true">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
+            </div>
+            <div class="heading" aria-controls="content-3" aria-expanded="false">
+                Question 3
+                <i class="plus-minus"></i>
+            </div> 
+            <div class="content" aria-hidden="true">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
+            </div>
+            <div class="heading" aria-controls="content-4" aria-expanded="false">
+                Question 4
+                <i class="plus-minus"></i>
+            </div> 
+            <div class="content" aria-hidden="true">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
+            </div>
         </div>
-        <div class="heading">
-            Question 2
-        </div> 
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
-        </div>
-        <div class="heading">
-            Question 3
-        </div> 
-        <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec purus odio, facilisis vel felis vitae, faucibus tempor leo. Sed elementum sagittis ligula, eu scelerisque lacus condimentum non. Cras finibus aliquam mollis. Duis ut mattis leo. Nulla quis massa quis libero fermentum sodales nec eu ex. Fusce elementum ac ligula ac interdum. Nulla id volutpat libero.</p>
-        </div>
-    </div>
+    </main>
     <script src="dist/js/app.min.js"></script>
 </body>
 </html>

@@ -25,3 +25,10 @@ $helvetica: 'Helvetica';
     -webkit-transition: $transition;
     transition: $transition;
 };
+@mixin animation($animation){
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    -ms-animation: $animation;
+    -webkit-animation: $animation;
+    animation: $animation;
+};

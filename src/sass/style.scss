@@ -1,12 +1,9 @@
 @import 'base.scss';
 
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+main{
+	padding: 50px 0
 }
-
-#accordion{
+.accordion{
 	font-family: $helvetica;
 	width: 90%;
 	max-width: 540px;
@@ -27,6 +24,11 @@
 		}
 
 		&.active{
+
+			& + .content {
+				@include fields;
+				max-height: none;
+			}
 			
 			.plus-minus{
 
@@ -76,7 +78,11 @@
 	}
 
 	.content{
-		@include fields;
+		max-height: 0;
+		border: 0;
+		padding: 0 20px;
+		overflow: hidden;
+		@include transition(padding 0.5s ease);	
 
 		p{
 			font-size: 14px;		
